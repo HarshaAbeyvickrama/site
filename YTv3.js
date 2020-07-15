@@ -59,13 +59,14 @@ function channelDetails() {
               // Handle the results here (response.result has the parsed body).
               //console.log("Response", response);
               var items=response.result.items[0];
+              var url=items.snippet.customUrl;
               window.alert("ok");
-              console.log("ids :",t);
+              console.log("ids :",items.id);
               console.log();
               console.log("title");
               console.log(items.snippet.title);
               console.log(items.snippet.description);
-              console.log(items.snippet.customUrl);
+              console.log(url);
               console.log(items.snippet.publishedAt);
               console.log(items.snippet.thumbnails.high.url);
               console.log(items.snippet.country);

@@ -46,13 +46,13 @@ function getSubscriptions() {
 
 //====================Get channel details by ID===============================================
 
-function channelDetails(channelId) {
+function channelDetails() {
     return gapi.client.youtube.channels.list({
       "part": [
         "snippet,contentDetails,statistics"
       ],
       "id": [
-        channelId
+        "UCNIPltykIATy0PhRp82uNMQ"
       ]
     })
         .then(function(response) {

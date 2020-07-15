@@ -58,21 +58,22 @@ function channelDetails() {
       .then(function(response) {
               // Handle the results here (response.result has the parsed body).
               //console.log("Response", response);
-              var t=response.result.items[0].id;
+              var items=response.result.items[0];
               window.alert("ok");
-              console.log("id :",t);
+              console.log("ids :",t);
               console.log();
               console.log("title");
-              console.log(response.result.items[0].snippet.title);
-              console.log(response.result.items[0].snippet.description);
-              console.log(response.result.items.snippet.customUrl);
-              console.log(response.result.items.snippet.publishedAt);
-              console.log(response.result.items.snippet.thumbnails.high.url);
-              console.log(response.result.items.snippet.country);
-              console.log(response.result.items.contentDetails.relatedPlaylists.uploads);
-              console.log(response.result.items.statistics.viewCount);
-              console.log(response.result.items.statistics.subscriberCount);
-              console.log(response.result.items.statistics.videoCount);
+              console.log(items.snippet.title);
+              console.log(items.snippet.description);
+              console.log(items.snippet.customUrl);
+              console.log(items.snippet.publishedAt);
+              console.log(items.snippet.thumbnails.high.url);
+              console.log(items.snippet.country);
+              console.log(items.contentDetails.relatedPlaylists.uploads);
+              console.log(items.statistics.viewCount);
+              console.log(items.statistics.subscriberCount);
+              console.log(items.statistics.hiddenSubscriberCount);
+              console.log(items.statistics.videoCount);
             },
             function(err) { console.error("Execute error", err); });
 }

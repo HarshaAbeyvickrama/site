@@ -84,5 +84,5 @@ function getCommentsForVideo(videoId) {
     gapi.auth2.init({client_id: clientId});
   });
   function s(){
-    channelDetails(UC-a4tdronX87NjfAMCxTj7w);
+    channelDetails("UC-a4tdronX87NjfAMCxTj7w");
   }

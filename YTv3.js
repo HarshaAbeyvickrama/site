@@ -97,5 +97,6 @@ function getCommentsForVideo(videoId) {
     gapi.auth2.init({client_id: clientId});
   });
   function s(){
-    channelDetails("UCNIPltykIATy0PhRp82uNMQ");
+    var t="UCNIPltykIATy0PhRp82uNMQ";
+    channelDetails(t);
   }

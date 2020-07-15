@@ -46,13 +46,13 @@ function getSubscriptions() {
 
 //====================Get channel details by ID===============================================
 
-function channelDetails() {
+function channelDetails(cId) {
   return gapi.client.youtube.channels.list({
     "part": [
       "snippet,contentDetails,statistics"
     ],
     "id": [
-      "UCNIPltykIATy0PhRp82uNMQ"
+      cId
     ]
   })
       .then(function(response) {
@@ -60,21 +60,18 @@ function channelDetails() {
               //console.log("Response", response);
               var items=response.result.items[0];
               var url=items.snippet.customUrl;
-              window.alert("ok");
-              console.log("ids :",items.id);
-              console.log();
-              console.log("title");
-              console.log(items.snippet.title);
-              console.log(items.snippet.description);
-              console.log("url",url);
-              console.log(items.snippet.publishedAt);
-              console.log(items.snippet.thumbnails.high.url);
-              console.log(items.snippet.country);
-              console.log(items.contentDetails.relatedPlaylists.uploads);
-              console.log(items.statistics.viewCount);
-              console.log(items.statistics.subscriberCount);
-              console.log(items.statistics.hiddenSubscriberCount);
-              console.log(items.statistics.videoCount);
+              var id=items.id;
+              var title=items.snippet.title;
+              var description=items.snippet.description;
+              var publishedAt=items.snippet.publishedAt;
+              var thumbnail=items.snippet.thumbnails.high.url;
+              var country=items.snippet.country;
+              var uploads =items.contentDetails.relatedPlaylists.uploads;
+              var viewCount=items.statistics.viewCount;
+              var subscriberCount=items.statistics.subscriberCount;
+              var hiddenSubscriberCount=items.statistics.hiddenSubscriberCount;
+              var videoCount=items.statistics.videoCount;
+              
             },
             function(err) { console.error("Execute error", err); });
 }

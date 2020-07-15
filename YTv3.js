@@ -58,9 +58,10 @@ function channelDetails() {
       .then(function(response) {
               // Handle the results here (response.result has the parsed body).
               //console.log("Response", response);
+              var t=response.result.items[0].id;
               window.alert("ok");
-              console.log("id :");
-              console.log(response.result.items[0].id);
+              console.log("id :",t);
+              console.log();
               console.log("title");
               console.log(response.result.items[0].snippet.title);
               console.log(response.result.items[0].snippet.description);

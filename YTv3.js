@@ -60,10 +60,10 @@ function channelDetails() {
               //console.log("Response", response);
               window.alert("ok");
               console.log("id :");
-              console.log(response.result.items.id);
+              console.log(response.result.items[0].id);
               console.log("title");
-              console.log(response.result.items.snippet.title);
-              console.log("des",response.result.items.snippet.description);
+              console.log(response.result.items[0].snippet.title);
+              console.log(response.result.items[0].snippet.description);
               console.log(response.result.items.snippet.customUrl);
               console.log(response.result.items.snippet.publishedAt);
               console.log(response.result.items.snippet.thumbnails.high.url);

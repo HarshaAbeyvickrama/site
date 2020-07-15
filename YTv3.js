@@ -47,21 +47,20 @@ function getSubscriptions() {
 //====================Get channel details by ID===============================================
 
 function channelDetails() {
-    return gapi.client.youtube.channels.list({
-      "part": [
-        "snippet,contentDetails,statistics"
-      ],
-      "id": [
-        "UCNIPltykIATy0PhRp82uNMQ"
-      ]
-    })
-        .then(function(response) {
-                
-                // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
-              },
-              function(err) { console.error("Execute error", err); });
-  }
+  return gapi.client.youtube.channels.list({
+    "part": [
+      "snippet,contentDetails,statistics"
+    ],
+    "id": [
+      "UCNIPltykIATy0PhRp82uNMQ"
+    ]
+  })
+      .then(function(response) {
+              // Handle the results here (response.result has the parsed body).
+              console.log("Response", response);
+            },
+            function(err) { console.error("Execute error", err); });
+}
 
 
 //===========================Get Comments for a video by Id============================================

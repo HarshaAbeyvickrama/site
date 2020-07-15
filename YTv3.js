@@ -58,7 +58,17 @@ function channelDetails() {
       .then(function(response) {
               // Handle the results here (response.result has the parsed body).
               //console.log("Response", response);
-              console.log(response.result.items)
+              console.log(response.result.items.id);
+              console.log(response.result.items.snippet.title);
+              console.log(response.result.items.snippet.description);
+              console.log(response.result.items.snippet.customUrl);
+              console.log(response.result.items.snippet.publishedAt);
+              console.log(response.result.items.snippet.thumbnails.high.url);
+              console.log(response.result.items.snippet.country);
+              console.log(response.result.items.contentDetails.relatedPlaylists.uploads);
+              console.log(response.result.items.statistics.viewCount);
+              console.log(response.result.items.statistics.subscriberCount);
+              console.log(response.result.items.statistics.videoCount);
             },
             function(err) { console.error("Execute error", err); });
 }
